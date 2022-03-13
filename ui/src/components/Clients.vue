@@ -431,6 +431,32 @@
                                     </template>
                                 </v-combobox>
                                 <v-switch
+                                        v-model="configureUpDownHooks"
+                                        color="red"
+                                        inset
+                                        :label="Configure Interface Up/Down Hooks"
+                                />
+                                <v-text-field
+                                        v-model="client.preUp"
+                                        label="PreUp"
+					v-if="configureUpDownHooks"
+                                />
+                                <v-text-field
+                                        v-model="client.postUp"
+                                        label="PostUp"
+					v-if="configureUpDownHooks"
+                                />
+                                <v-text-field
+                                        v-model="client.preDown"
+                                        label="PreDown"
+					v-if="configureUpDownHooks"
+                                />
+                                <v-text-field
+                                        v-model="client.postDown"
+                                        label="PostDown"
+					v-if="configureUpDownHooks"
+                                />
+                                <v-switch
                                         v-model="client.ignorePersistentKeepalive"
                                         color="red"
                                         inset

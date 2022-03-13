@@ -23,6 +23,10 @@ type Client struct {
 	UpdatedBy                 string    `json:"updatedBy"`
 	Created                   time.Time `json:"created"`
 	Updated                   time.Time `json:"updated"`
+	PreUp                     string    `json:"preUp"`
+	PostUp                    string    `json:"postUp"`
+	PreDown                   string    `json:"preDown"`
+	PostDown                  string    `json:"postDown"`
 }
 
 // IsValid check if model is valid
